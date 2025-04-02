@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotteri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    .header-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .main-text {
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery-item {
+      max-width: 200px;
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      max-width: 80%;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img src="header.jpg" alt="Lotteri Banner" class="header-image">
+  <div class="main-text">
+    <h1>Velkommen til Lotteriet!</h1>
+    <p>Delta og vinn fantastiske premier. Bla gjennom galleriet nedenfor for 
+       å se hva du kan vinne!</p>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="thumb1.jpg" alt="Premie 1" onclick="openModal('full1.jpg')">
+      <p>Beskrivelse av premie 1</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb2.jpg" alt="Premie 2" onclick="openModal('full2.jpg')">
+      <p>Beskrivelse av premie 2</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb3.jpg" alt="Premie 3" onclick="openModal('full3.jpg')">
+      <p>Beskrivelse av premie 3</p>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      modal.style.display = 'block';
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+
