@@ -22,11 +22,13 @@
       font-size: 1.2em;
     }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
       padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      justify-items: center;
     }
     .gallery-item {
       max-width: 200px;
@@ -68,7 +70,7 @@
   </style>
 </head>
 <body>
-  <img src="header.jpg" alt="Lotteri Banner" class="header-image">
+  <img src="header.png" alt="Lotteri Banner" class="header-image">
   <div class="main-text">
     <h1>Velkommen til Lotteriet!</h1>
     <p>Delta og vinn fantastiske premier. Bla gjennom galleriet nedenfor for 
@@ -87,6 +89,18 @@
     <div class="gallery-item">
       <img src="thumb3.png" alt="Premie 3" onclick="openModal('full3.png')">
       <p>Beskrivelse av premie 3</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb4.png" alt="Premie 4" onclick="openModal('full4.png')">
+      <p>Beskrivelse av premie 4</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb5.png" alt="Premie 5" onclick="openModal('full5.png')">
+      <p>Beskrivelse av premie 5</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb6.png" alt="Premie 6" onclick="openModal('full6.png')">
+      <p>Beskrivelse av premie 6</p>
     </div>
   </div>
 
@@ -109,4 +123,3 @@
   </script>
 </body>
 </html>
-
