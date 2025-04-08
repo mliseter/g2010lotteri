@@ -31,17 +31,27 @@
       justify-items: center;
     }
     .gallery-item {
-      max-width: 200px;
+      width: 200px;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       text-align: center;
     }
     .gallery-item img {
       width: 100%;
-      cursor: pointer;
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
+      cursor: pointer;
       transition: transform 0.2s;
     }
     .gallery-item img:hover {
       transform: scale(1.05);
+    }
+    .gallery-item p {
+      margin: 5px 0;
     }
     .modal {
       display: none;
@@ -78,32 +88,106 @@
   </div>
 
   <div class="gallery">
+    <!-- BEGIN GALLERY ITEMS -->
     <div class="gallery-item">
-      <img src="tusenfryd.png" alt="Premie 1" onclick="openModal('tusenfryd.png')">
-      <p>Dagbillett til Tusenfryd i 2025</p>
-      <p>Verdi 599,-</p>
+      <img src="thumb1.png" alt="Tusenfryd" onclick="openModal('Slide1.jpg')">
+      <p>Tusenfryd - dagsbillett</p>
+      <p>Verdi - 599,-</p>
     </div>
     <div class="gallery-item">
-      <img src="rituals.png" alt="Premie 2" onclick="openModal('rituals.png')">
-      <p>Rituals - gavepakning</p>
-      <p>Verdi 1200,-</p>
+      <img src="thumb2.png" alt="Mr Pukk" onclick="openModal('Slide2.jpg')">
+      <p>Mr Pukk Enebakk - gavekort</p>
+      <p>Verdi - 360,-</p>
     </div>
     <div class="gallery-item">
-      <img src="mekonomen.png" alt="Premie 3" onclick="openModal('mekonomen.png')">
-      <p>Dekkskifte hos Mekonomen i Ski</p>
-      <p>Verdi 500,-</p>
+      <img src="thumb3.png" alt="Rituals" onclick="openModal('Slide3.jpg')">
+      <p>Rituals - gavepakke</p>
+      <p>Verdi - 1200,-</p>
     </div>
     <div class="gallery-item">
-      <img src="thumb4.png" alt="Premie 4" onclick="openModal('full4.png')">
-      <p>Beskrivelse av premie 4</p>
+      <img src="thumb4.png" alt="Overnatting i Tinn" onclick="openModal('Slide4.jpg')">
+      <p>Overnatting i Tinn i Telemark</p>
+      <p>Verdi - 2500,-</p>
     </div>
     <div class="gallery-item">
-      <img src="thumb5.png" alt="Premie 5" onclick="openModal('full5.png')">
-      <p>Beskrivelse av premie 5</p>
+      <img src="thumb5.png" alt="CircleK" onclick="openModal('Slide5.jpg')">
+      <p>Circle K - Premiumkoppen</p>
+      <p>Verdi - 599,-</p>
     </div>
     <div class="gallery-item">
-      <img src="thumb6.png" alt="Premie 6" onclick="openModal('full6.png')">
-      <p>Beskrivelse av premie 6</p>
+      <img src="thumb6.png" alt="Tegn og gjett" onclick="openModal('Slide6.jpg')">
+      <p>Spill - Tegn og gjett</p>
+      <p>Verdi - 349,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb7.png" alt="Mekonomen" onclick="openModal('Slide7.jpg')">
+      <p>Mekonomen Ski - dekkskifte</p>
+      <p>Verdi - 500,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb8.png" alt="Kjendis" onclick="openModal('Slide8.jpg')">
+      <p>Kjendis - bok av Tora Maria Norberg</p>
+      <p>Verdi - 349,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb9.png" alt="Østfoldbadet" onclick="openModal('Slide9.jpg')">
+      <p>Østfoldbadet - inngang for 2</p>
+      <p>Verdi - 412,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb10.png" alt="DFDS" onclick="openModal('Slide10.jpg')">
+      <p>DFDS - minicruise</p>
+      <p>Verdi - 1150 kr</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb11.png" alt="YET" onclick="openModal('Slide11.jpg')">
+      <p>Ytre Enebakk Treningssenter - 3 mnd</p>
+      <p>Verdi - 1500 kr</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb12.png" alt="Vatersett" onclick="openModal('Slide12.jpg')">
+      <p>Vatersett fra Bahco</p>
+      <p>Verdi - 699,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb13.png" alt="Sushi Teria" onclick="openModal('Slide13.jpg')">
+      <p>Sushi Teria - Langhus</p>
+      <p>Verdi - 500,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb14.png" alt="t-lysholder" onclick="openModal('Slide14.jpg')">
+      <p>Jernia - t-lysholdere</p>
+      <p>Verdi - 500,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb15.png" alt="Salatskål" onclick="openModal('Slide15.jpg')">
+      <p>Jernia - salatskål</p>
+      <p>Verdi - 370,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb16.png" alt="Kolben" onclick="openModal('Slide16.jpg')">
+      <p>Rådhusteateret/Kolben - gavekort</p>
+      <p>Verdi - 500,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb17.png" alt="Kremmerhuset" onclick="openModal('Slide17.jpg')">
+      <p>Kremmerhuset - potte</p>
+      <p>Verdi - 749,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb18.png" alt="Premie 18" onclick="openModal('Slide18.jpg')">
+      <p>Beskrivelse premie 18</p>
+      <p>Verdi - xyz,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb19.png" alt="Premie 19" onclick="openModal('Slide19.jpg')">
+      <p>Beskrivelse premie 19</p>
+      <p>Verdi - xyz,-</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thumb20.png" alt="Premie 20" onclick="openModal('Slide20.jpg')">
+      <p>Beskrivelse premie 20</p>
+      <p>Verdi - xyz,-</p>
     </div>
   </div>
 
